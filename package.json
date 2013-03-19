@@ -1,0 +1,43 @@
+{
+  "author": "Kyle Finley <kyle.finley@gmail.com>",
+  "name": "sapling-seed",
+  "description": "AngularJS + Brunch",
+  "version": "0.2.2",
+  "homepage": "https://github.com/scotch/angular-brunch-seed",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scotch/angular-brunch-seed"
+  },
+  "engines": {
+    "node": "~0.6.10 || 0.8 || 0.9"
+  },
+  "scripts": {
+    "start": "node_modules/.bin/brunch watch --server",
+    "test": "node_modules/.bin/testacular start test/testacular.conf.js"
+  },
+  "dependencies": {
+    "jade": ">= 0.28",
+    "coffee-script": ">= 1.4",
+    "brunch": ">= 1.5 < 1.6",
+
+    "coffee-script-brunch": ">= 1.5 < 1.6",
+    "coffeelint-brunch": ">= 1.4 < 1.6",
+
+    "less-brunch": ">= 1.5 < 1.6",
+    "stylus-brunch": ">= 1.5 < 1.6",
+
+    "auto-reload-brunch": ">= 1.5 < 1.6",
+
+    "uglify-js-brunch": ">= 1.5 < 1.6",
+    "clean-css-brunch": ">= 1.5 < 1.6",
+
+    "bower-stylesheet-brunch": "*",
+    "bower-javascript-brunch": "*",
+    "bower-asserts-brunch": "*",
+    "bower": "~0.7.0",
+
+    "jade-angularjs-brunch": ">= 0.0.5",
+
+    "testacular": ">= 0.6.0"
+  }
+}
