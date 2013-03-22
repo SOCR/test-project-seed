@@ -9,6 +9,8 @@ App.config([
       templateUrl: '/partials/socr.html'
     }).when('/projects', {
       templateUrl: '/partials/projects.html'
+    }).when('/demo', {
+      templateUrl: '/partials/demo.html'
     }).when('/view1', {
       templateUrl: '/partials/partial1.html'
     }).when('/view2', {
@@ -19,37 +21,22 @@ App.config([
     return $locationProvider.html5Mode(false);
   }
 ]);
-
-App.run([
-  'd3', function(d3) {
-    var sampleSVG;
-
-    sampleSVG = d3.select("#viz").append("svg").attr("width", 100).attr("height", 100);
-    return sampleSVG.append("circle").style("stroke", "gray").style("fill", "white").attr("r", 40).attr("cx", 50).attr("cy", 50).on("mouseover", function() {
-      return d3.select(this).style("fill", "aliceblue");
-    }).on("mouseout", function() {
-      return d3.select(this).style("fill", "white");
-    });
-  }
-]);
 'use strict';
 /* Controllers
 */
-angular.module('app.controllers', []).controller('AppCtrl', [
+angular.module('app.controllers', ['app.services']).controller('AppCtrl', [
   '$scope', '$location', '$resource', '$rootScope', function($scope, $location, $resource, $rootScope) {
     $scope.$location = $location;
     $scope.$watch('$location.path()', function(path) {
       return $scope.activeNavId = path || '/';
     });
-    $scope.getClass = function(id) {
+    return $scope.getClass = function(id) {
       if ($scope.activeNavId.substring(0, id.length) === id) {
         return 'active';
       } else {
         return '';
       }
     };
-    console.log($('#test'));
-    return $('#test').tooltip();
   }
 ]).controller('MyCtrl1', [
   '$scope', function($scope) {
@@ -97,6 +84,17 @@ angular.module('app.controllers', []).controller('AppCtrl', [
         }
       });
     };
+  }
+]).controller('demoCtrl', [
+  'd3', function(d3) {
+    var sampleSVG;
+
+    sampleSVG = d3.select("#viz").append("svg").attr("width", 100).attr("height", 100);
+    return sampleSVG.append("circle").style("stroke", "gray").style("fill", "white").attr("r", 40).attr("cx", 50).attr("cy", 50).on("mouseover", function() {
+      return d3.select(this).style("fill", "aliceblue");
+    }).on("mouseout", function() {
+      return d3.select(this).style("fill", "white");
+    });
   }
 ]);
 'use strict';

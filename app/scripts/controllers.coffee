@@ -2,7 +2,7 @@
 
 ### Controllers ###
 
-angular.module('app.controllers', [])
+angular.module('app.controllers', ['app.services'])
 
 .controller('AppCtrl', [
   '$scope'
@@ -32,8 +32,6 @@ angular.module('app.controllers', [])
       return 'active'
     else
       return ''
-  console.log $('#test')
-  $('#test').tooltip()
 ])
 
 .controller('MyCtrl1', [
@@ -83,5 +81,19 @@ angular.module('app.controllers', [])
     angular.forEach oldTodos, (todo) ->
       $scope.todos.push todo  unless todo.done
 
+])
+
+.controller('demoCtrl', [
+  'd3'
+  (d3) ->
+    sampleSVG = d3.select("#viz").append("svg").
+    attr("width", 100).attr("height", 100)
+    sampleSVG.append("circle").style("stroke", "gray")
+      .style("fill", "white").attr("r", 40).attr("cx", 50)
+      .attr("cy", 50)
+      .on "mouseover", ->
+        d3.select(this).style "fill", "aliceblue"
+      .on "mouseout", ->
+        d3.select(this).style "fill", "white"
 ])
 

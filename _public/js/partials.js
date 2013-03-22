@@ -74,8 +74,23 @@ angular.module('partials', [])
 '      </ul>',
 '    </li>',
 '    <li><a href="#/projects"><span class="label label-important">Projects</span></a></li>',
+'    <li><a href="#/demo"><span class="label">Demo</span></a></li>',
 '  </ul>',
 '</p>',''].join("\n"));
+}])
+.run(['$templateCache', function($templateCache) {
+  return $templateCache.put('/partials/demo.html', [
+'',
+'<div ng-controller="demoCtrl"></div>',
+'<h1>',
+'  <Using>d3 service to create simple objects inside AngularJS framework.</Using>',
+'</h1>',
+'<p>',
+'  Inside AngularJS framework, everything is a module or is inside a module. A module can contain constant values,',
+'  services, factory methods.',
+'  In this example, in the backend we have created a d3 service. And we are using it to create a simple visualization',
+'</p>',
+'<div id="viz"></div>',''].join("\n"));
 }])
 .run(['$templateCache', function($templateCache) {
   return $templateCache.put('/partials/partial1.html', [
@@ -83,39 +98,13 @@ angular.module('partials', [])
 '<p>This is the partial for view 1.</p>',''].join("\n"));
 }])
 .run(['$templateCache', function($templateCache) {
-  return $templateCache.put('/partials/sidebar.html', [
+  return $templateCache.put('/partials/partial2.html', [
 '',
-'<div class="well sidebar-nav">',
-'  <ul class="nav nav-list">',
-'    <li class="nav-header">Get Started</li>',
-'    <li><a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_Videos">Videos</a></li>',
-'    <li><a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_Help_Pages">Help Pages</a></li>',
-'    <li><a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_EduMaterials">Activities</a></li>',
-'    <li><a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_Courses">Courses</a></li>',
-'    <li class="nav-header">Webapps and Resources</li>',
-'    <li><a href="http://socr.ucla.edu/Applets.dir/OnlineResources.html#Tables" title="Probaiblity Distribution Tables">Tables</a></li>',
-'    <li><a href="http://socr.ucla.edu/htmls/HTML5/" title="Modern browser embedded web-applications">New Webapps</a></li>',
-'    <li><a href="http://socr.ucla.edu/Applets.dir/OnlineResources.html#High-Precision_Distribution_Calculators" title="High-Precision Distribution Calculators">Precision Calculators</a></li>',
-'    <li class="nav-header">Java Applets</li>',
-'    <li><a href="http://socr.ucla.edu/htmls/dist/" title="Probability Distribution Calculators">Distributions</a></li>',
-'    <li><a href="http://socr.ucla.edu/htmls/exp" title="Virtual Computer Experiments and Simulations">Experiments</a></li>',
-'    <li><a href="http://socr.ucla.edu/htmls/ana/">Analyses</a></li>',
-'    <li><a href="http://socr.ucla.edu/htmls/SOCR_Modeler.html">Data Modeler</a></li>',
-'    <li><a href="http://socr.ucla.edu/htmls/SOCR_Charts.html">Charts and Graphs</a></li>',
-'    <li><a href="http://socr.ucla.edu/htmls/SOCR_Games.html">Games</a></li>',
-'    <li class="nav-header">Learning Materials</li>',
-'    <li><a href="http://wiki.stat.ucla.edu/socr/index.php/EBook">EBook</a></li>',
-'    <li><a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data">Datasets</a></li>',
-'    <li><a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_EduMaterials" title="Learning Modules and Hands-on Activities">Activities</a></li>',
-'    <li class="nav-header">Contribute to SOCR</li>',
-'    <li><a href="http://wiki.stat.ucla.edu/socr/index.php/Socr:Site_support" title="Consider making donations of any size to support SOCR student stipends and instructors training">Donations</a></li>',
-'    <li><a href="http://wiki.stat.ucla.edu/socr/index.php/Available_SOCR_Development_Projects">SOCR Projects</a></li>',
-'    <li><a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_News">Events</a></li>',
-'    <li><a href="http://forums.stat.ucla.edu/socr">Forum</a></li>',
-'    <li><a href="http://www.socr.ucla.edu/htmls/SOCR_Feedback.html">Survey</a></li>',
-'  </ul>',
-'</div>',
-'<div class="span10"><a href="img/SOCR_QRcode.png"><img title="SOCR QR Code" src="img/SOCR_QRcode.png" alt="SOCR QR Code" style="width: 100px; height: 100px;" align="left" hspace="1" vspace="5"/></a></div>',''].join("\n"));
+'<p>This is the partial for view 2.</p>',
+'<p>',
+'  Showing of \'interpolate\' filter:',
+'  {{ \'Current version is v%VERSION%.\' | interpolate }}',
+'</p>',''].join("\n"));
 }])
 .run(['$templateCache', function($templateCache) {
   return $templateCache.put('/partials/projects.html', [
@@ -176,13 +165,39 @@ angular.module('partials', [])
 '<!---->',''].join("\n"));
 }])
 .run(['$templateCache', function($templateCache) {
-  return $templateCache.put('/partials/partial2.html', [
+  return $templateCache.put('/partials/sidebar.html', [
 '',
-'<p>This is the partial for view 2.</p>',
-'<p>',
-'  Showing of \'interpolate\' filter:',
-'  {{ \'Current version is v%VERSION%.\' | interpolate }}',
-'</p>',''].join("\n"));
+'<div class="well sidebar-nav">',
+'  <ul class="nav nav-list">',
+'    <li class="nav-header">Get Started</li>',
+'    <li><a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_Videos">Videos</a></li>',
+'    <li><a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_Help_Pages">Help Pages</a></li>',
+'    <li><a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_EduMaterials">Activities</a></li>',
+'    <li><a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_Courses">Courses</a></li>',
+'    <li class="nav-header">Webapps and Resources</li>',
+'    <li><a href="http://socr.ucla.edu/Applets.dir/OnlineResources.html#Tables" title="Probaiblity Distribution Tables">Tables</a></li>',
+'    <li><a href="http://socr.ucla.edu/htmls/HTML5/" title="Modern browser embedded web-applications">New Webapps</a></li>',
+'    <li><a href="http://socr.ucla.edu/Applets.dir/OnlineResources.html#High-Precision_Distribution_Calculators" title="High-Precision Distribution Calculators">Precision Calculators</a></li>',
+'    <li class="nav-header">Java Applets</li>',
+'    <li><a href="http://socr.ucla.edu/htmls/dist/" title="Probability Distribution Calculators">Distributions</a></li>',
+'    <li><a href="http://socr.ucla.edu/htmls/exp" title="Virtual Computer Experiments and Simulations">Experiments</a></li>',
+'    <li><a href="http://socr.ucla.edu/htmls/ana/">Analyses</a></li>',
+'    <li><a href="http://socr.ucla.edu/htmls/SOCR_Modeler.html">Data Modeler</a></li>',
+'    <li><a href="http://socr.ucla.edu/htmls/SOCR_Charts.html">Charts and Graphs</a></li>',
+'    <li><a href="http://socr.ucla.edu/htmls/SOCR_Games.html">Games</a></li>',
+'    <li class="nav-header">Learning Materials</li>',
+'    <li><a href="http://wiki.stat.ucla.edu/socr/index.php/EBook">EBook</a></li>',
+'    <li><a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_Data">Datasets</a></li>',
+'    <li><a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_EduMaterials" title="Learning Modules and Hands-on Activities">Activities</a></li>',
+'    <li class="nav-header">Contribute to SOCR</li>',
+'    <li><a href="http://wiki.stat.ucla.edu/socr/index.php/Socr:Site_support" title="Consider making donations of any size to support SOCR student stipends and instructors training">Donations</a></li>',
+'    <li><a href="http://wiki.stat.ucla.edu/socr/index.php/Available_SOCR_Development_Projects">SOCR Projects</a></li>',
+'    <li><a href="http://wiki.stat.ucla.edu/socr/index.php/SOCR_News">Events</a></li>',
+'    <li><a href="http://forums.stat.ucla.edu/socr">Forum</a></li>',
+'    <li><a href="http://www.socr.ucla.edu/htmls/SOCR_Feedback.html">Survey</a></li>',
+'  </ul>',
+'</div>',
+'<div class="span10"><a href="img/SOCR_QRcode.png"><img title="SOCR QR Code" src="img/SOCR_QRcode.png" alt="SOCR QR Code" style="width: 100px; height: 100px;" align="left" hspace="1" vspace="5"/></a></div>',''].join("\n"));
 }])
 .run(['$templateCache', function($templateCache) {
   return $templateCache.put('/partials/socr.html', [
