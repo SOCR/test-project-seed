@@ -32,6 +32,8 @@ angular.module('app.controllers', [])
       return 'active'
     else
       return ''
+  console.log $('#test')
+  $('#test').tooltip()
 ])
 
 .controller('MyCtrl1', [

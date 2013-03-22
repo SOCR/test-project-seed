@@ -5,14 +5,16 @@ App = angular.module('app', ['ngCookies', 'ngResource', 'app.controllers', 'app.
 
 App.config([
   '$routeProvider', '$locationProvider', function($routeProvider, $locationProvider, config) {
-    $routeProvider.when('/todo', {
-      templateUrl: '/partials/todo.html'
+    $routeProvider.when('/socr', {
+      templateUrl: '/partials/socr.html'
+    }).when('/projects', {
+      templateUrl: '/partials/projects.html'
     }).when('/view1', {
       templateUrl: '/partials/partial1.html'
     }).when('/view2', {
       templateUrl: '/partials/partial2.html'
     }).otherwise({
-      redirectTo: '/todo'
+      redirectTo: '/socr'
     });
     return $locationProvider.html5Mode(false);
   }
@@ -39,13 +41,15 @@ angular.module('app.controllers', []).controller('AppCtrl', [
     $scope.$watch('$location.path()', function(path) {
       return $scope.activeNavId = path || '/';
     });
-    return $scope.getClass = function(id) {
+    $scope.getClass = function(id) {
       if ($scope.activeNavId.substring(0, id.length) === id) {
         return 'active';
       } else {
         return '';
       }
     };
+    console.log($('#test'));
+    return $('#test').tooltip();
   }
 ]).controller('MyCtrl1', [
   '$scope', function($scope) {
