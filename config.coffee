@@ -2,6 +2,7 @@ exports.config =
   # See docs at http://brunch.readthedocs.org/en/latest/config.html.
   conventions:
     ignored: /^(vendor.*\.less|.+node_modules.+|.+_.+\.+)$/
+    assets: /^app\/assets\//
   modules:
     definition: false
     wrapper: false
@@ -13,6 +14,7 @@ exports.config =
         'js/app.js': /^app/
         'js/vendor.js': /^vendor/
         'test/scenarios.js': /^test(\/|\\)e2e/
+
       order:
         before: [
           'vendor/d3/d3.js'
@@ -22,7 +24,7 @@ exports.config =
           'vendor/angular/angular.js'          
           'vendor/angular-resource/angular-resource.js'          
           'vendor/angular-cookies/angular-cookies.js'          
-          'vendor/angular-sanitize/angular-sanitize.js'                    
+          'vendor/angular-sanitize/angular-sanitize.js'
           'vendor/bootstrap/docs/assets/js/bootstrap.js'
         ]
 

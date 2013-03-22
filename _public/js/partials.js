@@ -1,5 +1,10 @@
 angular.module('partials', [])
 .run(['$templateCache', function($templateCache) {
+  return $templateCache.put('/partials/partial1.html', [
+'',
+'<p>This is the partial for view 1.</p>',''].join("\n"));
+}])
+.run(['$templateCache', function($templateCache) {
   return $templateCache.put('/partials/nav.html', [
 '',
 '<p class="navbar-text pull-right"><a href="html/feed.rss" class="btn icon rss"><i class="icon-bullhorn"></i>RSS</a>',
@@ -75,11 +80,6 @@ angular.module('partials', [])
 '    </li>',
 '  </ul>',
 '</p>',''].join("\n"));
-}])
-.run(['$templateCache', function($templateCache) {
-  return $templateCache.put('/partials/partial1.html', [
-'',
-'<p>This is the partial for view 1.</p>',''].join("\n"));
 }])
 .run(['$templateCache', function($templateCache) {
   return $templateCache.put('/partials/partial2.html', [
