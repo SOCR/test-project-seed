@@ -3,20 +3,21 @@ test-project-seed
 
 ### A starting point/project to implement the test projects of SOCR. 
 
-This seed project is to help you get to speed on how development process goes on at SOCR. By working on these projects, you will gets a hands on experience ofcoffeescript,brunch.io ,HTML5,AngularJS,GitHub,D3.
+This seed project is to help you get to speed on how development process goes on at SOCR. By working on these projects, you will gets a hands on experience on `coffeescript`, `brunch.io`, `HTML5`, `AngularJS`, `GitHub`, `D3`.
 
-Feel free to choose one of the experiments from the list given below and start working on it. Please keep updating your progress to github. If you are new to github, please refer  book  for more info. Git probably the best versioning tool ever created!
+Feel free to choose one of the experiments from the [list](socredu.github.com/test-project-seed/#/projects) and start working on it. If you are new to github, please refer [book](http://git-scm.com/book)  for more info on how to get and maintain the code . Git probably is the best versioning tool ever created!
 
-If you are not familiar with any language or technology, please refer their documentations or online examples.Or  send us an email at  selvam1991 at gmail dot com
+If you are not familiar with any language or technology, please refer their documentations or online examples. Or send us an email at  **selvam1991 at gmail dot com**
 
 ## Installation
 
 ### Prerequisites
   This application requires [NodeJS](http://nodejs.org) on the development machine. Please go ahead and install nodeJS.   This [article](http://howtonode.org/how-to-install-nodejs) will help beginners.
 ### Get the code! 
-  Clone this repo to your computer. If you are new to github, this [wiki] will help you get started.
+  Clone this repo to your computer. If you are new to github, this [wiki](http://git-scm.com/book) will help you get started. Please go through the first **3 chapters**.
+  
 ### Initialization
-  Once you have the code, you need initialize the project. Get into the directory where you cloned code, by default it should be test-project-seed/ . Initializing basically means installing certain node packages which is needed for setting up the enviroment. You just need to run this command from the command line:
+  Once you have the code, you need initialize the project. Get into the directory where you cloned the code, by default it should be test-project-seed/ . Initializing basically means installing certain node packages which is needed for setting up the enviroment. You just need to run this command from the command line:
   
     socr-testproject-seed selvam$ sudo ./scripts/init.sh 
     
@@ -28,3 +29,5 @@ If you are not familiar with any language or technology, please refer their docu
     socr-testproject-seed selvam$ sudo ./scripts/server.sh 
   
   Now open a browser and check http://localhost:3333 to see the running application!
+  
+  **Please feel free to contact us if you need any clarification on anything!**
