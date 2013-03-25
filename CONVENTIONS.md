@@ -1,8 +1,8 @@
 ## CONVENTIONS
-### *Coding best practices for angular-brunch-seed code.*
+### *Coding best practices for test-project-seed code.*
 
 ***
 
-* Use Coffeescript for scripts
-* Use Less for styles
-* Use Jade for templates
+* Use [Coffeescript](http://coffeescript.org) for scripts
+* Use [Less](http://lesscss.org/) for styles
+* Use [Jade](http://jade-lang.com/) for templates
