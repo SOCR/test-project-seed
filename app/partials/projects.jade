@@ -40,6 +40,9 @@
       p
         span.label.label-info Tools/languages :
         | AngularJS,ngGrid,Twitter Bootstrap
+      p
+        button.btn-medium.btn(type="button",data-toggle="modal",data-target="#project1") More Details
+
 
     .span6
       h2 AngularJS Service for table parsing
@@ -49,6 +52,8 @@
       p
         span.label.label-info Tools/languages :
         | AngularJS,Twitter Bootstrap
+      p
+        button.btn-medium.btn(type="button",data-toggle="modal",data-target="#project2") More Details
 
   //
     /row
@@ -65,6 +70,8 @@
       p
         span.label.label-info Tools/languages :
         | AngularJS,Twitter Bootstrap
+      p
+        button.btn-medium.btn(type="button",data-toggle="modal",data-target="#project3") More Details
 
     .span6
       h2  Example of converting a SOCR Simulation to AngularJS/New SOCR Interface
@@ -76,7 +83,68 @@
       p
         span.label.label-info Tools/languages :
         | AngularJS,Twitter Bootstrap,nvd3, Distributome
+      p
+        button.btn-medium.btn(type="button",data-toggle="modal",data-target="#project4") More Details
 
   //
     /row
+  .row-fluid
+    div#project1.modal.hide.fade
+        .modal-header
+            button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+            h3 JSON HTML5 Grid
+          .modal-body
+            p One fine body…
+          .modal-footer
+    div#project2.modal.hide.fade
+        .modal-header
+            button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+            h3 JSON HTML5 Grid
+          .modal-body
+            p One fine body…
+          .modal-footer
+    div#project3.modal.hide.fade
+        .modal-header
+            button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+            h3 JSON HTML5 Grid
+          .modal-body
+            p One fine body…
+          .modal-footer
+    div#project4.modal.hide.fade
+        .modal-header
+            button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+            h3 Converting a SOCR Simulation to AngularJS/New SOCR Interface
+          .modal-body
+            p
+              | Currently there are many tools, simulations , experiments in the &nbsp;
+              a(href="http://www.distributome.org/") Distributome project
+              | &nbsp; of SOCR. All of
+              | them are built using plain javascript.
+              | As you can you see, all these applications need Statistical distributions and calculators
+              | in the backend. Almost all the distributions that we use are present here in this &nbsp;
+              a(href="http://www.distributome.org/js/exp/core.js") file.
+              | &nbsp; Please go through it. This file contains Statistical Distributions, Distribution graphs,
+              | Objects (coin, die, card etc) .
+
+            p
+              | Now coming to beta binomial distribution. There is a &nbsp;
+              a(href="http://www.distributome.org/V3/exp/BetaBinomialExperiment.html") specific experiment
+              | &nbsp; explaining this distribution.
+              | If you check the source code for this experiment, you will find the js which contains the distribution.
+              | This file contains only distribution, since it needs only one. Including the core.js would just latency
+              | to the application.
+            p
+              AngularJS is a interesting framework. I highly recommend you to see the documentation before you start.
+
+
+            p
+              |The objective of the project is to implement this same application using AngularJS. Use the AngularJS
+              | controllers, services ,directives etc to make the application.
+
+            P
+              strong Please feel free to contact us for help!
+
+          .modal-footer
+
+
 //
