@@ -1,8 +1,21 @@
 div(ng-controller="demoCtrl")
 h1
-  Using d3 service to create simple objects inside AngularJS framework.
+  | Demo #1 : Using d3 service to create simple objects inside AngularJS framework.
 p
   |Inside AngularJS framework, everything is a module or is inside a module. A module can contain constant values,
   | services, factory methods.
   |In this example, in the backend we have created a d3 service. And we are using it to create a simple visualization
+p
+  | Technologies: &nbsp;
+  code
+    a(href="http://d3js.org") D3
 div#viz
+
+h1
+  | Demo #2 : Using ng-grid service to create data grids with editable cells and sortable columns.
+p
+  | Technologies: &nbsp;
+  code
+    a(href="http://angular-ui.github.com/ng-grid/") ng-grid
+div(ng-controller = "gridDemoCtrl")
+    div(ng-grid="gridOptions").gridStyle

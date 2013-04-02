@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ng-grid workbench</title>
+    <link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="../ng-grid.css" />
+    <script type="text/javascript" src="largeLoad.js"></script>
+    <script type="text/javascript" src="largeTestData.js"></script>
+    <script type="text/javascript" src="../lib/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="../lib/jquery-ui-1.9.1.custom.min.js"></script>
+    <script type="text/javascript" src="../lib/angular.js"></script>
+    <script type="text/javascript" src="../lib/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../build/ng-grid.debug.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+    <script>
+        angular.module('myApp',['ngGrid']);
+    </script>
+</head>
+    <body ng-app="myApp" ng-controller="userController">
+        <div style="width: 1600px; height: 600px;"  ng-grid="gridOptions">
+        </div>
+		<div>{{mySelections | json}}</div>
+        <button ng-click="checkData()">Check Data</button>
+        <button ng-click="Add()">Insert Rows</button>
+        <button ng-click="changeLang()">change Language</button>
+        <button ng-click="setSelection()">set Selections</button>
+    </body>
+</html>
