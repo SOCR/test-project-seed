@@ -1,7 +1,7 @@
 'use strict';
 var App;
 
-App = angular.module('app', ['ngCookies', 'ngResource', 'app.controllers', 'app.directives', 'app.filters', 'app.services', 'partials']);
+App = angular.module('app', ['ngCookies', 'ngResource', 'app.controllers', 'app.directives', 'app.filters', 'app.services', 'partials', 'gridDemo']);
 
 App.config([
   '$routeProvider', '$locationProvider', function($routeProvider, $locationProvider, config) {
@@ -114,6 +114,48 @@ angular.module('app.filters', []).filter('interpolate', [
   'version', function(version) {
     return function(text) {
       return String(text).replace(/\%VERSION\%/mg, version);
+    };
+  }
+]);
+var grid;
+
+grid = angular.module('gridDemo', ['ngGrid']);
+
+grid.controller("gridDemoCtrl", [
+  '$scope', function(scope) {
+    scope.myData = [
+      {
+        name: "Moroni",
+        age: 50
+      }, {
+        name: "Tiancum",
+        age: 43
+      }, {
+        name: "Jacob",
+        age: 27
+      }, {
+        name: "Nephi",
+        age: 29
+      }, {
+        name: "Enos",
+        age: 34
+      }
+    ];
+    return scope.gridOptions = {
+      data: 'myData',
+      enableCellSelection: true,
+      canSelectRows: false,
+      enableCellEdit: true,
+      columnDefs: [
+        {
+          field: 'name',
+          displayName: 'Name',
+          enableFocusedCellEdit: true
+        }, {
+          field: 'age',
+          displayName: 'Age'
+        }
+      ]
     };
   }
 ]);
