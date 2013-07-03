@@ -7676,3 +7676,14 @@ bootstrap, so they may override it's behavior.
   width: 400px;
   height: 200px;
 }
+
+body .wide-modal {
+    /* new custom width */
+    width: 750px;
+    /* must be half of the width, minus scrollbar on the left (30px) */
+    margin-left: -375px;
+}
+
+body .wide-modal .modal-body {
+    max-height: 600px;
+}
